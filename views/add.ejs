@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发布文章</title>
+    <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/add.css">
+
+</head>
+
+<body>
+<%- include("./public/header") %>
+<%- include("./public/nav") %>
+<section class="container add-wrap">
+    <form method="post" action="/article/add" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="uploadForm">
+                    <div class="form-group">
+                        <div class="h4"><span class="glyphicon glyphicon-user"></span>王妞妞</div>
+                        <div class="fileinput fileinput-new">
+                            <div class="fileinput-new thumbnail" id="preview"></div>
+                            <div>
+                                <span class="btn btn-primary btn-file my-file"> 
+                                    <span class="fileinput-new">选择文件</span>
+                                    <input type="file" onchange="preview(this)" name="img">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 my-form">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">标题</label>
+                    <input class="form-control" placeholder="请输入标题" type="text" name="title">
+                    <p class="tit-Prompt">请输入标题</p>
+                </div>
+                <div class="mb20">
+                    <div class="col-md-6">
+                        <label for="exampleInputPassword1">类型</label>
+                        <select class="form-control" name="category_id">
+                            <% for(let i = 0; i < category.length; i++) { %>
+                            <option value="<%= category[i]._id %>"><%= category[i].name %></option>
+                            <% } %>
+                        </select>
+                        <p class="tit-Prompt">请选择类型</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleInputPassword1">原作者</label>
+                        <input class="form-control " placeholder="请输入原作者" type="text" name="author">
+                        <p class="tit-Prompt">请输入原作者</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">精华文章</label>
+                    <div class="col-md-6">
+                        <div class="radio-inline">
+                            <input class="magic-radio" type="radio" name="is_jing" id="r1" value="1">
+                            <label for="r1">是</label>
+                        </div>
+                        <div class="radio-inline">
+                            <input class="magic-radio" type="radio" name="is_jing" id="r2" value="0" checked>
+                            <label for="r2">否</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-content">
+            <div class="form-group">
+                <label for="#content-div"><b>文章正文</b> 在这里填写详细的文章内容分享给大家</label>
+                <textarea id="content-area" style="display: none;" class="form-control" rows="3"
+                          name="content"></textarea>
+                <div id="content-div" style="background-color: white">
+
+                </div>
+            </div>
+        </div>
+        <div class="my-button">
+            <button type="button" class="btn btn-warning "> 立即保存</button>
+            <button type="submit" class="btn btn-danger  "> 立即发布</button>
+        </div>
+    </form>
+</section>
+<%- include("./public/footer") %>
+<script src="/library/jquery/jquery-3.3.1.js"></script>
+<script src="/library/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+<script type="text/javascript" src="/javascript/wangEditor.js"></script>
+<script type="text/javascript" src="/javascript/uploadsImg.js"></script>
+
+</body>
+
+</html>

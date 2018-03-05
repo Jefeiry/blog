@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/center.css">
+</head>
+<body>
+<%- include("./public/header") %>
+<%- include("./public/nav") %>
+
+<div class="content-wrap">
+    <div class="container personal-center">
+        <div class="row personal-center-row">
+            <div class="col-sm-2">
+
+                <ul class="nav personal-center-tab" role="tablist">
+                    <li role="presentation" class="active">
+                        <span class="vertical"></span>
+                        <span class="triangle"></span>
+                        <a href="#baseInfo" aria-controls="baseInfo" role="tab" data-toggle="tab">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            <h4>基本资料</h4>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <span class="vertical"></span>
+                        <span class="triangle"></span>
+                        <a href="#articleManager" aria-controls="articleManager" role="tab" data-toggle="tab"> <i
+                                    class="glyphicon glyphicon-list-alt"></i>
+                            <h4>文章管理</h4>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <span class="vertical"></span>
+                        <span class="triangle"></span>
+                        <a href="#classManager" aria-controls="classManager" role="tab" data-toggle="tab"> <i
+                                    class="glyphicon glyphicon-list-alt"></i>
+                            <h4>分类管理</h4>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <span class="vertical"></span>
+                        <span class="triangle"></span>
+                        <a href="#drafts" aria-controls="drafts" role="tab" data-toggle="tab"> <i
+                                    class="glyphicon glyphicon-list-alt"></i>
+                            <h4>草稿箱</h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="col-sm-10 main-content">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="baseInfo">
+                        <%- include("./personalCenter/baseInfo") %>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="articleManager">
+
+                        <% if(articleEidt){ %>
+                        <%- include("./personalCenter/articleManagerEdit") %>
+                        <% }else{ %>
+                        <%- include("./personalCenter/articleManagerList") %>
+                        <% } %>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="classManager">.333..</div>
+                    <div role="tabpanel" class="tab-pane" id="drafts">..44.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<%- include("./public/footer") %>
+<%- include("./personalCenter/passwordEdit") %>
+
+
+<script src="/library/jquery/jquery-3.3.1.js"></script>
+<script src="/library/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+
+
+<script type="text/javascript" src="/javascript/wangEditor.js"></script>
+<script type="text/javascript" src="/javascript/uploadsImg.js"></script>
+<script>
+
+    $(document).ready(function () {
+        if (location.hash) {
+            $("a[href='" + location.hash + "']").tab('show');
+        }
+        else {
+            location.hash = $("a[data-toggle=tab]").first().attr("href");
+        }
+
+        $(document.body).on("click", "a[data-toggle]", function (event) {
+            location.hash = this.getAttribute("href");
+        });
+
+    });
+    $(window).on('popstate', function () {
+        var anchor = location.hash || $("a[data-toggle=tab]").first().attr("href");
+        $("a[href='" + anchor + "']").tab('show');
+
+    });
+
+</script>
+
+
+</body>
+</html>

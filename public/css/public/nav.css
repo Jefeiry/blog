@@ -1,0 +1,90 @@
+.topnav {
+    min-width: 300px;
+}
+
+.topnav .navbar {
+    margin-bottom: 0;
+}
+
+.topnav .navbar-brand {
+
+}
+
+.topnav .navbar-default {
+    background-color: #fff;
+}
+
+.topnav .navbar-default .navbar-brand:hover,
+.topnav .navbar-default .navbar-brand:focus {
+    color: #DF5B57;
+    background-color: transparent;
+}
+
+.topnav .navbar-default .navbar-collapse ul li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.topnav .navbar-default .navbar-collapse .dropdown-menu {
+    min-width: 109px;
+    border-top: 0;
+}
+
+.topnav .navbar-default .navbar-collapse .dropdown-menu li a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.topnav .navbar-default .navbar-collapse .dropdown-menu li a {
+    color: #333;
+}
+
+.topnav .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.topnav .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #DF5B57;
+    background-color: transparent;
+}
+
+.topnav .navbar-default .navbar-nav > li > a:hover,
+.topnav .navbar-default .navbar-nav > li > a:focus {
+    color: #DF5B57;
+    background-color: transparent;
+}
+
+.topnav .navbar-default .navbar-nav > .active > a,
+.topnav .navbar-default .navbar-nav > .active > a:focus,
+.topnav .navbar-default .navbar-nav > .active > a:hover {
+    color: #DF5B57;
+    background-color: transparent;
+}
+
+.topnav .navbar-default .navbar-collapse .navbar-nav #publish {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.topnav .navbar-default .navbar-collapse .navbar-nav #publish a {
+    padding-bottom: 6px;
+    padding-top: 6px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    border: 1px solid #d43f3a;
+    letter-spacing: 3px;
+    border-radius: 0;
+}
+
+.topnav .navbar-default .navbar-collapse .navbar-nav #publish a:hover {
+    color: #fff;
+    background-color: #ac2925;
+    border-color: #761c19;
+}
+
+@media (max-width: 768px) {
+    .topnav .navbar-default .navbar-collapse .navbar-nav #publish {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

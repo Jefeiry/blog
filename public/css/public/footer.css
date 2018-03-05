@@ -1,0 +1,132 @@
+#footer {
+    padding-top: 20px;
+    padding-bottom: 35px;
+    min-width: 300px;
+    background-color: #121212;
+}
+
+#footer-left {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+}
+
+#footer-left h4 {
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #666;
+    padding-left: 15px;
+}
+
+#footer-left ul {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+    #footer-left h4 {
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+
+    #footer-left ul {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+#footer-left ul li span {
+    display: inline-block;
+    color: #aaa;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#footer-left ul li a {
+    display: inline-block;
+    color: #aaa;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+#footer-right {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: 1px solid #666;
+}
+
+@media (max-width: 768px) {
+    #footer-right {
+        border-left: 0;
+    }
+}
+
+#footer-right #footer-right-header {
+    padding-left: 50px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #666;
+}
+
+#footer-right #footer-right-header ul {
+
+}
+
+#footer-right #footer-right-header ul li {
+    padding-top: 12px;
+}
+
+#footer-right #footer-right-header ul li a {
+    font-size: 18px;
+
+    color: #aaa;
+}
+
+#footer-right #footer-right-header ul li + li {
+    padding-left: 100px;
+}
+
+#footer-right #footer-right-body {
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+#footer-right #footer-right-body .media .media-body {
+    padding-left: 15px;
+}
+
+#footer-right #footer-right-body .media .media-body h5 {
+    color: #fff;
+    font-size: 15px;
+}
+
+#footer-right #footer-right-body .media .media-body p {
+    color: #666;
+    font-size: 15px;
+    padding-top: 30px;
+}
+
+#footer-right #footer-right-body address {
+    font-size: 15px;
+    color: #999;
+    line-height: 28px;
+}
+
+@media (max-width: 768px) {
+    #footer-right #footer-right-header {
+        border-top: 1px solid #666;
+        padding-top: 10px;
+    }
+    #footer-right #footer-right-header .list-inline>li{
+        display: list-item;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #footer-right #footer-right-body {
+        padding-right: 50px;
+    }
+}

@@ -1,0 +1,49 @@
+@import "./base.css";
+@import "./public/header.css";
+@import "./public/footer.css";
+
+#login-content {
+    min-width: 300px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+#login-content #login-left {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#login-content #login-header h2 {
+    color: #E05C58;
+    padding-bottom: 20px;
+}
+
+#login-content .form-group #username, #login-content .form-group #password {
+    height: 50px;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+#login-content .checkbox {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #999;
+}
+
+#login-content #login-submit {
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#login-content #login-right {
+    background: url("../images/loginbg.png") no-repeat center center;
+    background-size: 362px 367px;
+    height: 367px;
+}

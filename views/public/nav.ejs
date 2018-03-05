@@ -1,0 +1,81 @@
+<div class="topnav">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header hidden-sm">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#topnav-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">个人博客</a>
+            </div>
+            <div class="collapse navbar-collapse" id="topnav-collapse">
+                <ul class="nav navbar-nav">
+
+
+                    <!--<li class="dropdown">-->
+                    <!--<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                    <!--aria-haspopup="true" aria-expanded="false">文章推荐-->
+                    <!--<span>-->
+                    <!--<img src="/images/107.gif" alt="">-->
+                    <!--</span>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu">-->
+                    <!--<li><a href="#">设计</a></li>-->
+                    <!--<li><a href="#">web前端</a></li>-->
+                    <!--<li><a href="#">灵感</a></li>-->
+                    <!--<li><a href="#">原创作品</a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li><a href="/personalCenter">个人中心</a></li>-->
+                    <li>
+                        <a href="<%= locals.sysList[0].path %>" class="categoryLink"><%= locals.sysList[0].name %></a>
+                    </li>
+                    <% for(let i = 0; i < locals.navList.length; i++) { %>
+                    <li>
+                        <a href="<%= locals.navList[i].path %>" class="categoryLink"><%= locals.navList[i].name %></a>
+                    </li>
+                    <% } %>
+                    <li>
+                        <a href="<%= locals.sysList[1].path %>" class="categoryLink"><%= locals.sysList[1].name %></a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="publish">
+                        <a href="/article/add" class="btn btn-danger" role="button"><i
+                                    class="glyphicon glyphicon-plus"></i>发布文章</a>
+                    </li>
+                    <li>
+                        <div class="container-fluid">
+                            <form class="navbar-form" action="/" method="get">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请填写此内容" name="key">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="submit">搜索</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</div>
+
+<script>
+    let categoryLink = document.querySelectorAll(".categoryLink");
+    for (let i = 0; i < categoryLink.length; i++) {
+        if (window.location.href == categoryLink[i].href) {
+            categoryLink[i].parentNode.classList.add("active");
+        }
+        else {
+            categoryLink[i].parentNode.classList.remove("active");
+        }
+    }
+</script>

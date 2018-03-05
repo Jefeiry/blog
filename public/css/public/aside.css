@@ -1,0 +1,170 @@
+/**
+*  侧边栏
+*/
+
+/**
+*  div水平线
+*/
+
+.div-hr {
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    width: 0px;
+    height: 0px;
+    border-right: 90px solid #DF5B57;
+    border-bottom: 5px solid #DF5B57;
+    z-index: 10;
+}
+
+/**
+*  个人简介
+*/
+
+.person-introduction {
+    position: relative;
+    background: #fff;
+    padding: 30px 30px 25px 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.person-introduction .introduction-title {
+    color: #DF5B57;
+    margin-bottom: 20px;
+}
+
+.person-introduction .introduction-header {
+    margin-bottom: 20px;
+}
+
+.person-introduction .introduction-header img {
+    border-radius: 50%;
+}
+
+.person-introduction .introduction-content {
+    margin-left: -30px;
+    margin-right: -30px;
+    background-color: #DF5B57;
+    margin-bottom: 20px;
+}
+
+.person-introduction .introduction-content ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+.person-introduction .introduction-content ul li {
+}
+
+.person-introduction .introduction-content ul li a {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.person-introduction .introduction-content ul li a:focus,
+.person-introduction .introduction-content ul li a:hover {
+    text-decoration: none
+}
+
+.person-introduction .introduction-footer p {
+    color: #333;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+/**
+*  个人标签
+*/
+
+.person-label {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.person-label .label-title {
+    font-size: 18px;
+    color: #333;
+    line-height: 30px;
+}
+
+.person-label .label-content {
+    background: #fff;
+    padding: 20px;
+}
+
+.person-label .label-content .btn {
+    margin: 5px;
+}
+
+/**
+*  文章精选
+*  热门文章
+*/
+
+.article-choice,
+.article-hot {
+    background: #fff;
+    padding: 30px 30px 0px 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.article-choice .choice-title,
+.article-hot .hot-title {
+    color: #DF5B57;
+    margin-bottom: 20px;
+}
+
+.article-choice .choice-body,
+.article-hot .hot-body {
+    margin-bottom: 30px;
+}
+
+.article-choice .choice-body .choice-body-img {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 15px;
+}
+
+.article-choice .choice-body .choice-body-img img {
+    width: 100%;
+}
+
+.article-choice .choice-body .choice-body-content,
+.article-hot .hot-body .hot-body-content {
+    margin-bottom: 10px;
+}
+
+.article-choice .choice-body .choice-body-content p,
+.article-hot .hot-body .hot-body-content p {
+    text-align: left;
+    margin-bottom: 0px;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.article-choice .choice-body .choice-body-content p a,
+.article-hot .hot-body .hot-body-content p a {
+    color: #333;
+}
+
+.article-choice .choice-body .choice-body-content p a:focus,
+.article-choice .choice-body .choice-body-content p a:hover,
+.article-hot .hot-body .hot-body-content p a:focus,
+.article-hot .hot-body .hot-body-content p a:hover {
+    text-decoration: none;
+    color: #DF5B57;
+}
+
+.article-choice .choice-body .choice-body-footer,
+.article-hot .hot-body .hot-body-footer {
+    color: #999;
+    overflow: hidden;
+}

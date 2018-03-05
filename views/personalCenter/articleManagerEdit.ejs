@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-md-3">
+        <form id="uploadForm">
+            <div class="form-group">
+                <a href="/personalCenter#articleManager">返回</a>
+                <div class="h4"><span class="glyphicon glyphicon-user"></span>王妞妞</div>
+                <div class="fileinput fileinput-new">
+                    <div class="fileinput-new thumbnail" id="preview">
+                        <img src="/uploads/<%= articleEidt.img %>" alt="">
+                    </div>
+                    <div>
+                                <span class="btn btn-primary btn-file my-file">
+                                    <span class="fileinput-new">选择文件</span>
+                                    <input type="file" onchange="preview(this)" value="/uploads/<%= articleEidt.img %>"
+                                           name="img">
+                                </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-9 my-form">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputPassword1">标题</label>
+                <input class="form-control" placeholder="请输入标题" type="text" value=<%= articleEidt.title %>>
+                <p class="tit-Prompt">请输入标题</p>
+            </div>
+            <div class="mb20">
+                <div class="col-md-6">
+                    <label for="exampleInputPassword1">类型</label>
+                    <select class="form-control">
+                        <option>请选择类型</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <p class="tit-Prompt">请选择类型</p>
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleInputPassword1">原作者</label>
+                    <input class="form-control " placeholder="请输入原作者" type="text" value=<%= articleEidt.author %>>
+                    <p class="tit-Prompt">请输入原作者</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">精华文章</label>
+                <div class="col-md-6">
+
+                    <div class="radio-inline">
+                        <input class="magic-radio" type="radio" name="is_jing" id="r1"
+                               value="1" <% if(articleEidt.is_jing == 1){ %>checked
+                                <% } %>
+                        >
+                        <label for="r1">是</label>
+                    </div>
+                    <div class="radio-inline">
+                        <input class="magic-radio" type="radio" name="is_jing" id="r2"
+                               value="0" <% if(articleEidt.is_jing == 0){ %>checked
+                                <% } %>
+                        >
+                        <label for="r2">否</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row my-content">
+    <div class="form-group">
+        <label for="#content-div"><b>文章正文</b> 在这里填写详细的文章内容分享给大家</label>
+        <textarea id="content-area" style="display: none;" class="form-control" rows="3"
+                  name="content"></textarea>
+        <div id="content-div" style="background-color: white">
+            <p><%= articleEidt.content %></p>
+        </div>
+    </div>
+</div>
+<div class="my-button">
+    <button type="button" class="btn btn-warning "> 立即保存</button>
+    <button type="button" class="btn btn-danger  "> 重新发布</button>
+</div>

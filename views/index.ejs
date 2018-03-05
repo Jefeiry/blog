@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<%- include("./public/header") %>
+<%- include("./public/nav") %>
+<section class="content-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <% for(var i = 0; i < list.length; i++) { %>
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">
+                            <a href=""><%= list[i].title %></a>
+                        </h1>
+                        <div class="article-meta">
+                            <span class="author">作者：<a href=""><%= list[i].author %></a></span>
+                            <span>•</span>
+                            <time class="art-date"><%= list[i].create_at %></time>
+                        </div>
+                    </div>
+                    <% if(list[i].img) { %>
+                    <div class="article-media">
+                        <a href="">
+                            <img src="/uploads/<%= list[i].img %>" alt="">
+                        </a>
+                    </div>
+                    <% } %>
+                    <div class="article-content">
+                        <%- content[i].html %>
+                    </div>
+                    <div class="article-permalink">
+                        <a href="/article/details?id=<%= list[i]._id %>" class="btn btn-danger">阅读全文</a>
+                    </div>
+                    <div class="article-footer clearfix">
+                        <div class="counter pull-right">
+                            <i class="glyphicon glyphicon-heart"></i>
+                            <span>阅读</span>
+                            <span><%= list[i].view %></span>
+                        </div>
+                    </div>
+                </article>
+                <% } %>
+
+                <div class="page">
+                    <% if(totalPage > 1) { %>
+                    <ul class="page-ul list-unstyled">
+                        <% if(page > 1) { %>
+                        <li><a href="/?<% if(key) { %>key=<%= key %>&<% } %>page=<%= parseInt(page) - 1 %>"
+                               class="btn btn-danger previous">&laquo;</a>
+                        </li>
+                        <% } %>
+                        <li><a href="javascript:;" class="btn btn-danger pageview">第<%= page %>页 / 共<%= totalPage %>
+                                页</a></li>
+                        <% if(totalPage > page) { %>
+                        <li><a href="/?<% if(key) { %>key=<%= key %>&<% } %>page=<%= parseInt(page) + 1 %>"
+                               class="btn btn-danger next">&raquo;</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                    <% } %>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-4">
+                <%- include("./public/aside") %>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include("./public/footer") %>
+<script src="/library/jquery/jquery-3.3.1.js"></script>
+<script src="/library/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+

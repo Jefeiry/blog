@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="baseInfo-edit">
+            <h3>基本资料
+                <small>-它显示</small>
+            </h3>
+            <form action="/users/update?id=<%=user._id%>" method="post">
+                <div class="form-group">
+                    <label for="nickname">昵称：
+                        <small>它显示</small>
+                    </label>
+                    <input type="text" class="form-control" id="nickname" name="nickname" value=<%=user.nickname%>>
+                </div>
+                <div class="form-group">
+                    <label for="personalized">个性签名：
+                        <small>它显示</small>
+                    </label>
+                    <input type="text" class="form-control" id="personalized" name="signature" value=<%=user.signature%>>
+                </div>
+                <div class="form-group">
+                    <label for="position">职位：
+                        <small>它显示</small>
+                    </label>
+                    <input type="text" class="form-control" id="position" name="position" value=<%=user.position%>>
+                </div>
+                <div class="form-group">
+                    <label for="contact">社交账号：
+                        <small>它显示</small>
+                    </label>
+                    <input type="text" class="form-control" id="contact" name="username" value=<%=user.username%>>
+                </div>
+                <div class="info-footer">
+                    <button type="submit" class="btn btn-danger">确定</button>
+                    <button type="button" class="btn btn-default">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="baseInfo-view">
+            <div class="baseInfo-view-header text-center">
+                <a href="/users/login"><img src="/images/icon.jpg" alt=""></a>
+            </div>
+            <div class="baseInfo-view-content">
+                <ul class="list-unstyled text-center">
+                    <li>
+                        <button type="button" class="btn btn-danger">修改头像</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#passwordModal">修改密码
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

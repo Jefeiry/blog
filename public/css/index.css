@@ -1,0 +1,198 @@
+/**
+*  主页
+*/
+@import "./base.css";
+@import "./public/header.css";
+@import "./public/nav.css";
+@import "./public/aside.css";
+@import "./public/footer.css";
+
+/**
+*  主体部分
+*/
+
+.content-wrap {
+    background-color: #F5F5F5;
+    padding-top: 40px;
+    min-width: 300px;
+}
+
+/**
+*  文章部分
+*/
+
+.article {
+    padding: 35px;
+    background: #fff;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/**
+*  文章头部
+*/
+
+.article .article-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article .article-header .article-title {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.article .article-header .article-title a {
+    color: #303030;
+}
+
+.article .article-header .article-title a:focus,
+.article .article-header .article-title a:hover {
+    text-decoration: none;
+}
+
+/**
+*  文章信息
+*/
+
+.article .article-header .article-meta {
+    color: #959595;
+    margin: 14px 0 0;
+}
+
+.article .article-header .article-meta span {
+    margin: 0 7px;
+    white-space: nowrap;
+}
+
+.article .article-header .article-meta a {
+    color: #959595;
+}
+
+.article .article-header .article-meta a:focus,
+.article .article-header .article-meta a:hover {
+    text-decoration: none
+}
+
+/**
+*  文章封面
+*/
+
+.article .article-media {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.article .article-media img {
+    width: 100%;
+}
+
+/**
+*  文章内容
+*/
+
+.article .article-content {
+    font: 400 18px/1.62 Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+    color: #444443;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    margin-bottom: 0;
+}
+
+/**
+*  文章固定链接
+*/
+
+.article-permalink {
+    margin-bottom: 20px;
+}
+
+.article-permalink .btn {
+    border-radius: 0px;
+    display: inline-block;
+    padding: 8px 45px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+/**
+*  文章底部
+*/
+
+.article .article-footer {
+    border-top: 1px solid #ebebeb;
+    padding: 20px 0px 0px 0px;
+    font-size: 15px;
+}
+
+.article .article-footer .counter {
+    color: #959595;
+    line-height: 20px;
+}
+
+.article .article-footer .counter i {
+    font-size: 20px;
+}
+
+.article .article-footer .counter span {
+    margin-left: 5px;
+}
+
+/**
+*  分页按钮
+*/
+
+.page {
+    margin-bottom: 50px;
+    padding-top: 20px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.page .page-ul {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+.page .page-ul > li {
+    display: block;
+    float: left;
+}
+
+.page .page-ul > li + li {
+    margin-left: 10px;
+}
+
+.page .page-ul > li > .previous {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.page .page-ul > li > .pageview {
+    border-radius: 0;
+}
+
+.page .page-ul > li > .next {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+

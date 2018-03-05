@@ -1,0 +1,97 @@
+
+
+
+
+<div class="person-introduction">
+    <div class="div-hr"></div>
+    <h4 class="introduction-title">博主简介</h4>
+    <div class="introduction-header text-center">
+        <% if(locals.userList.img) { %>
+        <img src="/uploads/<%= locals.userList.img %>" alt="">
+        <% } %>
+    </div>
+    <div class="introduction-content">
+        <ul class="list-unstyled text-center">
+            <li><a href=""><%= locals.userList.nickname %></a></li>
+            <li><a href=""><%= locals.userList.position %></a></li>
+            <li><a href="">公众号：<%= locals.userList.username %></a></li>
+        </ul>
+    </div>
+    <div class="introduction-footer">
+        <p>个性签名:<%= locals.userList.signature %></p>
+    </div>
+</div>
+
+
+
+<div class="person-label">
+    <h4 class="label-title">个人标签</h4>
+    <div class="label-content">
+        <button type="button" class="btn btn-danger">手绘</button>
+        <button type="button" class="btn btn-primary">ps教程</button>
+        <button type="button" class="btn btn-success">文字特效</button>
+        <button type="button" class="btn btn-danger">调色</button>
+        <button type="button" class="btn btn-danger">调色</button>
+        <button type="button" class="btn btn-danger">调色</button>
+        <button type="button" class="btn btn-danger">调色</button>
+        <button type="button" class="btn btn-danger">调色</button>
+    </div>
+</div>
+
+
+
+<div class="article-choice">
+    <div class="div-hr"></div>
+    <h4 class="choice-title">精选文章</h4>
+
+    <% for(var i = 0; i < locals.articleJing.length; i++) { %>
+    <div class="choice-body text-center">
+        <% if(locals.articleJing[i].img) { %>
+        <div class="choice-body-img">
+            <img src="/uploads/<%= locals.articleJing[i].img %>" alt="">
+        </div>
+        <% } %>
+        <div class="choice-body-content">
+            <p>
+                <a href=""><%= locals.articleJing[i].title %></a>
+            </p>
+        </div>
+        <div class="choice-body-footer">
+            <div class="pull-left">
+                <span><%= locals.articleJing[i].create_at %></span>
+            </div>
+            <div class="pull-right">
+                <i class="glyphicon glyphicon-heart"></i>
+                <span>阅读</span>
+                <span><%= locals.articleJing[i].view %></span>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+
+
+<div class="article-hot">
+    <div class="div-hr"></div>
+    <h4 class="hot-title">热门文章</h4>
+    <% for(var i = 0; i < locals.articleHot.length; i++) { %>
+    <div class="hot-body text-center">
+
+        <div class="hot-body-content">
+            <p>
+                <a href="/article/details?id=<%= locals.articleHot[i]._id %>"><%= locals.articleHot[i].title %></a>
+            </p>
+        </div>
+        <div class="hot-body-footer">
+            <div class="pull-left">
+                <span><%= locals.articleHot[i].create_at %></span>
+            </div>
+            <div class="pull-right">
+                <i class="glyphicon glyphicon-heart"></i>
+                <span>阅读</span>
+                <span><%= locals.articleHot[i].view %></span>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>

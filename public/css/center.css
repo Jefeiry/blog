@@ -1,0 +1,191 @@
+/**
+* 引入外部CSS
+*/
+
+@import "./base.css";
+@import "./public/header.css";
+@import "./public/nav.css";
+@import "./public/footer.css";
+@import "./add.css";
+@import "./personalCenter/passwordEdit.css";
+@import "./personalCenter/baseInfo.css";
+@import "./personalCenter/articleManagerList.css";
+
+
+
+/**
+* 个人中心内容
+*/
+
+.content-wrap {
+    padding-top: 50px;
+    background-color: #F5F5F5;
+    overflow: hidden;
+}
+
+.content-wrap .personal-center {
+    padding-bottom: 40px;
+}
+
+
+
+/**
+* tab菜单
+*/
+
+.personal-center-tab {
+    border-bottom: none;
+    overflow: hidden;
+}
+
+.personal-center-tab > li {
+    float: none;
+    margin-bottom: 0;
+    position: relative;
+    background-color: #F2ECEC;
+    width: 100%;
+    height: 130px;
+
+}
+
+.personal-center-tab > li > a {
+    line-height: 1.42857143;
+    border: 0;
+    border-radius: 0;
+    color: #AEAEAE;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.personal-center-tab > li > a:hover {
+    color: #E05C58;
+    cursor: default;
+    background-color: #fff;
+    border: 0;
+}
+
+
+.personal-center-tab > li > a .glyphicon {
+    font-size: 30px;
+}
+
+.personal-center-tab > li > a h4 {
+    font-size: 14px;
+}
+
+
+.personal-center-tab > li.active > .triangle {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid #E05C58;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    z-index: 10;
+}
+
+.personal-center-tab > li.active > .vertical {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-left: 5px solid #E05C58;
+    z-index: 10;
+}
+
+.personal-center-tab > li.active > a,
+.personal-center-tab > li.active > a:hover,
+.personal-center-tab > li.active > a:focus {
+    color: #E05C58;
+    cursor: default;
+    border: 0;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .personal-center-tab > li {
+        width: 100%;
+        height: 100%;
+    }
+
+    .personal-center-tab > li > a h4 {
+        font-size: 14px;
+    }
+
+    .personal-center-tab > li > a .glyphicon-list-alt {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .personal-center-tab > li {
+        width: 25%;
+        float: left;
+    }
+
+    .personal-center-tab > li > a h4 {
+        font-size: 14px;
+    }
+
+    .personal-center-tab > li > a .glyphicon {
+        font-size: 25px;
+    }
+
+    .personal-center-tab > li.active > .triangle {
+        left: 50%;
+        top: 0;
+        margin-top: 0;
+        margin-left: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 12px solid #E05C58;
+    }
+
+    .personal-center-tab > li.active > .vertical {
+        width: 100%;
+        height: 0;
+        border-left: none;
+        border-top: 5px solid #E05C58;
+    }
+
+    .personal-center-tab {
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.tab-content {
+    margin-left: -30px;
+    background-color: #fff;
+    padding: 20px 15px 0 40px;
+    margin-right: -15px;
+    overflow: hidden;
+}
+.tab-content .tab-pane{
+    margin-bottom: 350px;
+}
+
+@media (max-width: 768px) {
+    
+    .tab-content{
+        margin: 0;
+        padding-left: 15px;
+    }
+}
+
+

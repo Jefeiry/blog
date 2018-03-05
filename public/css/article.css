@@ -1,0 +1,131 @@
+/**
+*  主页
+*/
+@import "./base.css";
+@import "./public/header.css";
+@import "./public/nav.css";
+@import "./public/aside.css";
+@import "./public/footer.css";
+
+/**
+*  主体部分
+*/
+
+.content-wrap {
+    background-color: #F5F5F5;
+    padding-top: 40px;
+    min-width: 300px;
+}
+
+/**
+*  文章部分
+*/
+
+.article {
+    padding: 35px;
+    background: #fff;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/**
+*  文章头部
+*/
+
+.article .article-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article .article-header .article-title {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2em;
+}
+
+.article .article-header .article-title a {
+    color: #303030;
+}
+
+.article .article-header .article-title a:focus,
+.article .article-header .article-title a:hover {
+    text-decoration: none;
+}
+
+/**
+*  文章信息
+*/
+
+.article .article-header .article-meta {
+    color: #959595;
+    margin: 14px 0 0;
+}
+
+.article .article-header .article-meta span {
+    margin: 0 7px;
+    white-space: nowrap;
+}
+
+.article .article-header .article-meta a {
+    color: #959595;
+}
+
+.article .article-header .article-meta a:focus,
+.article .article-header .article-meta a:hover {
+    text-decoration: none
+}
+
+/**
+*  文章内容
+*/
+
+.article .article-content {
+    font: 400 18px/1.62 Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+    color: #444443;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    margin-bottom: 0;
+}
+
+/**
+*  文章底部
+*/
+
+.article .article-footer {
+    border-top: 1px solid #ebebeb;
+    padding: 20px 0px 0px 0px;
+    font-size: 15px;
+}
+
+.article .article-footer .counter {
+    color: #959595;
+    line-height: 20px;
+}
+
+.article .article-footer .counter i {
+    font-size: 20px;
+}
+
+.article .article-footer .counter span {
+    margin-left: 5px;
+}
+
+/**
+*  文章内容显示
+*/
+
+.article .article-content img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    vertical-align: middle !important;
+    border: 0 !important;
+}
+
+.article .article-content p {
+    margin-top: 35px !important;
+    text-indent: 2em !important;
+}

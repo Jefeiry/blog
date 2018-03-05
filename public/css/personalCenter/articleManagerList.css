@@ -1,0 +1,52 @@
+
+.article-list-header{
+    margin-bottom: 35px;
+}
+.article-list {
+    background: #fff;
+    padding: 30px 30px 0px 30px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.article-list .list-body {
+    margin-bottom: 20px;
+}
+
+
+.article-list .list-body .list-body-content p {
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+
+.article-list .list-body .list-body-content p a {
+    color: #333;
+}
+
+
+.article-list .list-body .list-body-content p a:focus,
+.article-list .list-body .list-body-content p a:hover {
+    text-decoration: none;
+    color: #DF5B57;
+}
+
+.article-list .list-body .list-body-footer {
+    color: #999;
+    overflow: hidden;
+}
+.article-list .list-body .list-body-footer a{
+    color: #337AB7;
+    margin-left: 20px;
+}
+.article-list .list-body .list-body-footer a:focus,
+.article-list .list-body .list-body-footer a:hover{
+    text-decoration: none;
+    color: #DF5B57;
+}

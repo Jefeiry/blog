@@ -1,0 +1,30 @@
+<div>
+    <h3 class="article-list-header">文章编辑
+        <small>-共<%= totalPage %>篇文章</small>
+    </h3>
+
+    <% for(var i = 0;i < articleList.length;i++){ %>
+    <div class="article-list">
+        <div class="list-body text-center">
+            <div class="list-body-content">
+                <p>
+                    <a href=""><%= articleList[i].title %></a>
+                </p>
+            </div>
+            <div class="list-body-footer">
+                <div class="pull-left">
+                    <span>时间：</span>
+                    <span><%= articleList[i].create_at %></span>
+                </div>
+                <div class="pull-right">
+                    <i class="glyphicon glyphicon-heart"></i>
+                    <span>阅读</span>
+                    <span><%= articleList[i].view %></span>
+                    <a href="/article/update?id=<%= articleList[i]._id %>#articleManager">编辑</a>
+                    <a href="/article/delete?id=<%= articleList[i]._id %>">删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
